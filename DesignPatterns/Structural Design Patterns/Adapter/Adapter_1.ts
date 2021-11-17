@@ -48,13 +48,14 @@ class Adapter extends Target {
  * Клиентский код поддерживает все классы, использующие целевой интерфейс.
  */
 
-function clientCode(target: Target) {
+function clientCode22(target: Target) {
+  // @ts-ignore
   console.log(target.request());
 }
 
 const target = new Target();
-clientCode(target);
+clientCode22(target);
 
 const adaptee = new Adaptee();
 const adapter = new Adapter(adaptee);
-clientCode(adapter);
+clientCode22(adapter);
